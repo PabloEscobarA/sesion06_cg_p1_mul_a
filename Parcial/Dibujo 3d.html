@@ -1,0 +1,64 @@
+<html>
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+        <script>
+        function draw() 
+        {
+            var canvas = document.getElementById('canvas');
+            if (canvas.getContext)
+            {
+                var ctx = canvas.getContext('2d');
+                var ctx1 = canvas.getContext('2d');
+
+                //Piramide - Triangulo1
+                ctx.beginPath();
+                ctx.moveTo(50,200);
+                ctx.lineTo(200,200);
+                ctx.lineTo(125,50);
+                ctx.closePath();
+                ctx.fillStyle="orange";
+                ctx.fill();
+
+                //Piramide - Triangulo2
+                ctx.beginPath();
+                ctx.moveTo(200,100);
+                ctx.lineTo(200,200);
+                ctx.lineTo(125,50);
+                ctx.closePath();
+                ctx.fillStyle="yellow";
+                ctx.fill();
+
+    
+                //Triangulo1
+                ctx.beginPath();
+                ctx.moveTo(250,200);
+                ctx.lineTo(400,200);
+                ctx.lineTo(325,50);
+                ctx.closePath();
+                ctx.fillStyle="orange";
+                ctx.fill();
+
+                //Triangulo2
+                ctx.beginPath();
+                ctx.moveTo(400,475);
+                ctx.lineTo(400,375);
+                ctx.lineTo(290,320);
+                ctx.closePath();
+                ctx.fillStyle="yellow";
+                ctx.fill();
+
+            
+
+                //Piramide Transformación - Triangulo1
+                ctx.beginPath();
+                ctx.scale(100,80);
+                ctx.moveTo(50,400);
+                ctx.lineTo(200,400);
+                ctx.lineTo(125,250);
+                ctx.closePath();
+                ctx.fillStyle="orange";                
+                ctx.fill();
+            }
+        }
+        draw();
+    </script>
+</html>
